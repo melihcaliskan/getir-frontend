@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "icon": "svgr assets/icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\""
   },
   "dependencies": {
+    "@svgr/cli": "^5.4.0",
     "next": "9.5.3",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "styled-components": "^5.2.0"
   }
 }
