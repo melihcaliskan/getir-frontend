@@ -12,7 +12,7 @@ yarn dev | yarn build | yarn start
 - Henüz yok.
 
 # Katkıda Bulunanlar
-- Tasarım: **Feyza Demirci** ([dribble](https://dribbble.com/feyzademirci) · [twitter](https://twitter.com/corbieofthesoul))
+- Tasarım: **Feyza Demirci** ([dribbble](https://dribbble.com/feyzademirci) · [twitter](https://twitter.com/corbieofthesoul))
 - Front-end: **Melih Çalışkan** ([website](https://melihcaliskan.com) · [twitter](https://twitter.com/melih_caliskan))
 - Back-end: Henüz yok.
 
