@@ -22,6 +22,7 @@ const App = ({ Component, pageProps, router, router: { asPath } }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="getir.com" />
         <meta property="og:url" content="https://getir.com" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <GlobalStyles />
