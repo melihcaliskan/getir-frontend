@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight } from './icons'
 import Carousel, { slidesToShowPlugin } from '@brainhubeu/react-carousel';
 import React, { useState } from 'react';
 
+import Fade from 'react-reveal/Fade';
 import Separator from "../components/Separator"
 import styled from 'styled-components'
 
@@ -74,45 +75,47 @@ const Categories = ({ isMobile }) => {
   const [value, setValue] = useState(0);
 
   return (
-    <Container>
-      <Title>Kampanyalar</Title>
-      <Separator
-        center
-        borderRadius={10}
-        width={"24px"}
-        height={"2px"}
-        marginTop={-10}
-        marginBottom={-10}
-        color="#5D3EBC" />
+    <Fade>
+      <Container>
+        <Title>Kampanyalar</Title>
+        <Separator
+          center
+          borderRadius={10}
+          width={"24px"}
+          height={"2px"}
+          marginTop={-10}
+          marginBottom={-10}
+          color="#5D3EBC" />
 
-      <Carousel
-        value={value}
-        onChange={(val) => setValue(val)}
-        plugins={[
-          'infinite',
-          {
-            resolve: slidesToShowPlugin,
-            options: {
-              numberOfSlides: isMobile ? 1 : 2
-            }
-          },
-        ]}>
-        <img className="carousel-item" width="320px" src="/offer-1.png" />
-        <img className="carousel-item" width="320px" src="/offer-2.png" />
-        <img className="carousel-item" width="320px" src="/offer-1.png" />
-        <img className="carousel-item" width="320px" src="/offer-2.png" />
-      </Carousel>
+        <Carousel
+          value={value}
+          onChange={(val) => setValue(val)}
+          plugins={[
+            'infinite',
+            {
+              resolve: slidesToShowPlugin,
+              options: {
+                numberOfSlides: isMobile ? 1 : 2
+              }
+            },
+          ]}>
+          <img className="carousel-item" width="320px" src="/offer-1.png" />
+          <img className="carousel-item" width="320px" src="/offer-2.png" />
+          <img className="carousel-item" width="320px" src="/offer-1.png" />
+          <img className="carousel-item" width="320px" src="/offer-2.png" />
+        </Carousel>
 
-      <ButtonContainer>
-        <CarouselButton onClick={() => setValue(value - 1)}>
-          <ArrowLeft />
-        </CarouselButton>
-        <CarouselButton onClick={() => setValue(value + 1)}>
-          <ArrowRight />
-        </CarouselButton >
-      </ButtonContainer>
+        <ButtonContainer>
+          <CarouselButton onClick={() => setValue(value - 1)}>
+            <ArrowLeft />
+          </CarouselButton>
+          <CarouselButton onClick={() => setValue(value + 1)}>
+            <ArrowRight />
+          </CarouselButton >
+        </ButtonContainer>
 
-    </Container>
+      </Container>
+    </Fade>
   )
 }
 

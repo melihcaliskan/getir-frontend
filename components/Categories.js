@@ -52,7 +52,7 @@ const Item = styled.div`
   border-radius:30px;
   box-shadow: 0px 2px 8px -2px #C1BADE;
     
-  transition: all 0.5s ease;
+  transition: transform 0.5s ease;
 
   &:nth-child(-n+5){
     margin-top: ${(props) => !props.isMobile && "-7em"}
