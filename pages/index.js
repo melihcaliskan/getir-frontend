@@ -34,9 +34,7 @@ const Home = (props) => {
         <Header {...props} />
         <CTA  {...props} />
         <Categories isMobile={isMobile} />
-        {/*}
         <Offers isMobile={isMobile} />
-        {*/}
         <Apps {...props}/>
       </Container>
       <Footer />
