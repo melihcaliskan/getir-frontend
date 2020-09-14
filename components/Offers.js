@@ -24,7 +24,7 @@ const Container = styled.section`
 `
 const Title = styled.p`
   text-align:center;
-  font-size:24px;
+  font-size:28px;
   @media only screen and (max-width: 960px) {
     font-size:20px;
   }

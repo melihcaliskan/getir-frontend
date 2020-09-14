@@ -9,15 +9,27 @@ const Container = styled.section`
   justify-content:flex-end;
   position:relative;
 
-  margin:15em 0 15em 5em;
+  margin:15em 0 10em 5em;
   padding:3em 0 5em 0;
   border-radius: 40px;
   background:${({ theme }) => theme.HOME_APPS_BG};
+
+  .text-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    width:60%;
+  }
 
   @media only screen and (max-width: 960px) {
     margin:8em 0 0 0; 
     padding:5em 1em 2em 1em;
     text-align:center;
+
+    .text-container{
+      width:100%;
+    }
   }
 `
 
@@ -25,14 +37,15 @@ const HeroImage = styled.div`
   width:640px;
   height:640px;
   position:absolute;
-  top:0;
-  left:0;
+  top:-10em;
+  left:-2em;
   background-image: url("/phones.png");
   background-size:contain;
   background-repeat:no-repeat;
 
   @media only screen and (max-width: 960px) {
-    left:25%;
+    left:50%;
+    transform: translateX(-50%);
     top:-5.5em;
     width:160px;
     height:160px;
@@ -89,7 +102,7 @@ const Apps = ({ isMobile }) => {
   return (
     <Container>
       <HeroImage />
-      <div style={{ width: !isMobile && "50%" }}>
+      <div class="text-container">
         <HeroText>
           Getir uygulamasını <br /> simdi indirin.
 					</HeroText>

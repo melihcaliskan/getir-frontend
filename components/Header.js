@@ -146,7 +146,6 @@ const MobileSearchContainer = styled.div`
   }
 `
 
-
 const CartContainer = styled.div`
   position:relative;
   display:inline-flex;
@@ -184,10 +183,10 @@ const CustomHeader = ({ toggleTheme, isMobile }) => {
     <Fade duration={700}>
       <Header>
         {isMobile &&
-          <span onClick={() => toggleTheme()}><Logo src="/logo-mobile.png" width="40px" alt="getir" /></span>
+          <span onClick={() => null}><Logo src="/logo-mobile.png" width="40px" alt="getir" /></span>
         }
         <Left className="no-mobile">
-          <span onClick={() => toggleTheme()}><Logo src="/logo.png" width="80px" alt="getir" /></span>
+          <span onClick={() => null}><Logo src="/logo.png" width="80px" alt="getir" /></span>
           <Search>
             <input type="text" placeholder="getir'de ara" />
             <SearchIcon />

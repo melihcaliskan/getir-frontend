@@ -6,7 +6,6 @@ import styled from 'styled-components'
 const Container = styled.div`
   display:flex;
   flex-direction:column;
-  align-items:center;
   position:relative;
   margin-top:3em;
   @media only screen and (max-width: 960px) {
@@ -27,15 +26,17 @@ const Left = styled.div`
     padding:1rem 2rem;
   }
 `
-
 const HeroText = styled.h2`
   color:#24222A;
   line-height:1.5em;
 `
+
 const DetailText = styled.p`
   font-size:18px;
   line-height:1.7em;
   color:${({ theme }) => theme.DETAIL_TEXT};
+
+  width:40%;
   @media only screen and (max-width: 960px) {
     width:60%;
     font-size:14px;
