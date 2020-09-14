@@ -1,5 +1,6 @@
 import { Location, Vehicle } from './icons'
 
+import VerticalSeparator from "./VerticalSeparator"
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -10,10 +11,12 @@ const Container = styled.div`
 	padding:0.4rem 1.5em;
 	border-radius: 14px;
 	background:${({ theme }) => theme.body};
-
 	box-shadow: 0px 2px 8px -2px #C1BADE;
 
 	font-size:18px;
+
+	transition: all .4s;
+	cursor:pointer;
 	svg{
 		font-size:20px;
 		margin-right: 0.5em;
@@ -23,24 +26,20 @@ const Container = styled.div`
 		color:${({ theme }) => theme.BRAND_PURPLE};
 		font-weight:bold;
 	}
-`
 
-const Separator = styled.div`
-	width:1px;
-	height:24px;
-	margin:0 0.8em;
-	background:${({ theme }) => theme.SEPARATOR};
+	&:hover{
+		background:#F4F4F6;
+	}
 `
-
 
 // Separator componenti ile yapılacak.
 const ETA = (props) => {
 	return (
 		<Container>
 			<Location />
-			<Separator />
+			<VerticalSeparator />
 			<p>Bebek Mah. Cevdetpaşa Cad. N..</p>
-			<Separator />
+			<VerticalSeparator />
 			<Vehicle />
 			<p className="brand-color">9 DK</p>
 		</Container>

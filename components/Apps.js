@@ -1,5 +1,6 @@
 import { AppStore, GooglePlay } from './icons'
 
+import Fade from 'react-reveal/Fade';
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -71,19 +72,19 @@ const Apps = (props) => {
 			<div style={{ width: "50%" }}>
 				<HeroText>
 					Getir uygulamasını <br /> simdi indirin.
-				</HeroText>
+					</HeroText>
 				<DetailText>
 					Uygulamayı indirebilmeniz için telefonunuza <br /> bir bağlantı göndereceğiz.
-				</DetailText>
+					</DetailText>
 
 				<Links>
 					<Button href="#">
 						<AppStore /> App Store
-					</Button>
+						</Button>
 
 					<Button href="#">
 						<GooglePlay /> Google Play
-					</Button>
+						</Button>
 				</Links>
 			</div>
 		</Container>
