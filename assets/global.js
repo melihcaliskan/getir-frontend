@@ -8,14 +8,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.TEXT};
     transition: all 0.15s linear;
   }
 
   a,p,span {
-    color: ${({ theme }) => theme.text};
+    color: ${({ theme }) => theme.TEXT};
   }
 `
