@@ -1,5 +1,7 @@
 export { default as Instagram } from './Instagram'
 export { default as AppStore } from './AppStore'
+export { default as ArrowLeft } from './ArrowLeft'
+export { default as ArrowRight } from './ArrowRight'
 export { default as Bag } from './Bag'
 export { default as Dropdown } from './Dropdown'
 export { default as Facebook } from './Facebook'
