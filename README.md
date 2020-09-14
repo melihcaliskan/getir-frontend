@@ -9,7 +9,10 @@ yarn dev | yarn build | yarn start
 ```
 
 # Todo
-- Henüz yok.
+- CTA'daki border-radius sorunu çözülecek.
+- Aramaya basınca aşağıya menü açılacak.
+- Loading componenti yapılacak.
+- Animasyon eklenecek.
 
 # Katkıda Bulunanlar
 - Tasarım: **Feyza Demirci** ([dribbble](https://dribbble.com/feyzademirci) · [twitter](https://twitter.com/corbieofthesoul))
