@@ -17,14 +17,15 @@ export const lightTheme = {
   body_800: "#2F2F2F",
   body_900: "#191919",
 
-  TEXT:"#3B3946",
+  TEXT: "#3B3946",
   SEARCH_TEXT: "#AEABBA",
   DETAIL_TEXT: "#3B3946",
-  FOOTER_TEXT:"#494178",
-  FOOTER_SEPARATOR:"#FFD733",
+  FOOTER_TEXT: "#494178",
+  FOOTER_SEPARATOR: "#FFD733",
 
   HOME_CATEGORY_BG: "#F9F9FA",
-
+  HOME_APPS_BG: "#F4F4F6",
+  
   ...theme
 }
 
