@@ -1,3 +1,4 @@
+import Apps from '../components/Apps'
 import CTA from "../components/CTA"
 import Categories from "../components/Categories"
 import Footer from '../components/Footer'
@@ -21,11 +22,12 @@ const Home = (props) => {
     <>
       <Container>
         <Header {...props} />
-        <CTA  {...props}/>
+        <CTA  {...props} />
         <Categories isMobile={isMobile} />
         {/*}
         <Offers isMobile={isMobile} />
         {*/}
+        <Apps {...props}/>
       </Container>
       <Footer />
     </>
