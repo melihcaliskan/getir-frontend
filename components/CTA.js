@@ -4,6 +4,9 @@ import Separator from "../components/Separator"
 import styled from 'styled-components'
 
 const Container = styled.div`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   position:relative;
   margin-top:3em;
   @media only screen and (max-width: 960px) {
@@ -92,7 +95,9 @@ const CTA = ({ isMobile, theme }) => {
           <HeroImg />
         </Container>
         {isMobile &&
-          <ETA isMobile={isMobile} />
+          <div style={{ textAlign: 'center' }}>
+            <ETA isMobile={isMobile} />
+          </div>
         }
       </div>
     </Fade>
