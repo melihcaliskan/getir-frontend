@@ -24,6 +24,7 @@ const App = ({ Component, pageProps, router, router: { asPath } }) => {
         <meta property="og:title" content="getir.com" />
         <meta property="og:url" content="https://getir.com" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
       </Head>
 
       <GlobalStyles />
