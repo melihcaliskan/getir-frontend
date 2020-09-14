@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function SvgAppStore(props) {
+function SvgAppstore(props) {
   return (
     <svg width="1em" height="1em" viewBox="0 0 20 24" fill="none" {...props}>
       <path
@@ -15,4 +15,4 @@ function SvgAppStore(props) {
   );
 }
 
-export default SvgAppStore;
+export default SvgAppstore;
