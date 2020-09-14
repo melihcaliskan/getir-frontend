@@ -9,8 +9,18 @@ import styled from 'styled-components'
 const Container = styled.div`
   display:flex;
   flex-direction:column;
-  max-width:1280px;
+  max-width:75%;
   margin: 0 auto;
+  padding: 0 2em;
+
+  @media only screen and (max-width: 1440px) {
+    max-width:100%;
+    padding: 0 5em;
+  }
+
+  @media only screen and (max-width: 740px) {
+    padding:0 1em;
+  }
 `
 
 const Home = (props) => {
