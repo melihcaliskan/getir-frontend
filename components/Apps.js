@@ -22,6 +22,13 @@ const Container = styled.section`
     width:60%;
   }
 
+  @media only screen and (max-width: 1440px) {
+    padding:1em 0 3em 0;
+  }
+
+  @media only screen and (max-width: 1280px) {
+  }
+
   @media only screen and (max-width: 960px) {
     margin:8em 0 0 0; 
     padding:5em 1em 2em 1em;
@@ -42,6 +49,20 @@ const HeroImage = styled.div`
   background-image: url("/phones.png");
   background-size:contain;
   background-repeat:no-repeat;
+
+  transition: all .4s;
+
+  @media only screen and (max-width: 1440px) {
+    top:-6em;
+    width:140%;
+    height:140%;
+  }
+
+  @media only screen and (max-width: 1280px) {
+    top:-3em;
+    width:120%;
+    height:120%;
+  }
 
   @media only screen and (max-width: 960px) {
     left:50%;
