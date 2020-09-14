@@ -1,4 +1,9 @@
 import '../assets/normalize.css'
+import 'swiper/swiper.scss';
+import 'swiper/components/navigation/navigation.scss';
+import 'swiper/components/pagination/pagination.scss';
+import 'swiper/components/scrollbar/scrollbar.scss';
+import 'swiper/components/effect-fade/effect-fade.scss';
 
 import React, { useEffect, useState } from 'react'
 import { darkTheme, lightTheme } from '../assets/theme';
