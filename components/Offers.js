@@ -97,10 +97,10 @@ const Categories = ({ isMobile }) => {
             }
           },
         ]}>
-        <a href="#"><img className="carousel-item" width="320px" src="/offer-1.png" /></a>
-        <a href="#"> <img className="carousel-item" width="320px" src="/offer-2.png" /></a>
-        <a href="#"><img className="carousel-item" width="320px" src="/offer-1.png" /></a>
-        <a href="#"> <img className="carousel-item" width="320px" src="/offer-2.png" /></a>
+        <img className="carousel-item" width="320px" src="/offer-1.png" />
+        <img className="carousel-item" width="320px" src="/offer-2.png" />
+        <img className="carousel-item" width="320px" src="/offer-1.png" />
+        <img className="carousel-item" width="320px" src="/offer-2.png" />
       </Carousel>
 
       <ButtonContainer>
