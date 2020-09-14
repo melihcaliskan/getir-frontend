@@ -78,6 +78,9 @@ const Item = styled.div`
   }
 
   @media only screen and (max-width: 960px) {
+    p{
+      font-size:13px;
+    }
     &:nth-child(-n+3){
       margin-top: ${(props) => props.isMobile && "-2.5em"}
     }
