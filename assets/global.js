@@ -7,9 +7,7 @@ export const GlobalStyles = createGlobalStyle`
   *::before {
     box-sizing: border-box;
   }
-
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
-
+  
   body {
     font-family: 'Lato', sans-serif;
     background: ${({ theme }) => theme.body};
@@ -19,5 +17,20 @@ export const GlobalStyles = createGlobalStyle`
 
   a,p,span {
     color: ${({ theme }) => theme.TEXT};
+  }
+
+  @media only screen and (max-width: 1280px) {
+    h2{
+      font-size:32px;
+    }
+  }
+
+  @media only screen and (max-width: 960px) {
+    h2{
+      font-size:20px;
+    }
+    p{
+      font-size:14px;
+    }
   }
 `
