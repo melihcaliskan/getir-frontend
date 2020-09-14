@@ -6,6 +6,9 @@ import styled from 'styled-components'
 const Container = styled.div`
   position:relative;
   margin-top:3em;
+  @media only screen and (max-width: 960px) {
+    margin-top:1em;
+  }
 `
 
 const Left = styled.div`
@@ -17,21 +20,22 @@ const Left = styled.div`
   @media only screen and (max-width: 1280px) {
     padding:1rem 3rem;
   }
+  @media only screen and (max-width: 960px) {
+    padding:1rem 2rem;
+  }
 `
 
 const HeroText = styled.h2`
   color:#24222A;
   line-height:1.5em;
-  @media only screen and (max-width: 1280px) {
-    font-size:32px;
-  }
 `
 const DetailText = styled.p`
   font-size:18px;
   line-height:1.7em;
   color:${({ theme }) => theme.DETAIL_TEXT};
-  @media only screen and (max-width: 1280px) {
-    font-size:17px;
+  @media only screen and (max-width: 960px) {
+    width:60%;
+    font-size:14px;
   }
 `
 
@@ -54,29 +58,43 @@ const HeroImg = styled.div`
     top:40px;
     width:360px;
   }
+
+  @media only screen and (max-width: 960px) {
+    top:80px;
+    width:120px;
+  }
 `
 
-const CTA = ({ theme }) => {
+const CTA = ({ isMobile, theme }) => {
+  const DETAIL_TEXT = isMobile ?
+    `1500'den fazla ürünle, dakikalar içinde, dilediğiniz yere mutluluk getiriyoruz.`
+    :
+    `1500'den fazla ürünle, dakikalar içinde, İstanbul, İzmir,
+                        Ankara, Bursa,
+                        Kocaeli ve Bodrum'da dilediğiniz yere
+                        mutluluk getiriyoruz.`
   return (
     <Fade bottom duration={700} distance="50px">
-      <Container>
-        <Left>
-          <HeroText>
-            Her zaman & her yere <br />
-          binlerce ürün siparisi ver.
-        </HeroText>
-          <Separator width={72} marginBottom={30} color={theme.SEPARATOR_YELLOW} />
-          <DetailText>
-            1500'den fazla ürünle, dakikalar içinde, İstanbul, İzmir, <br />
-            Ankara, Bursa,
-            Kocaeli ve Bodrum'da dilediğiniz yere <br />
-            mutluluk getiriyoruz.
-        </DetailText>
-          <ETA />
-        </Left>
-
-        <HeroImg />
-      </Container>
+      <div>
+        <Container>
+          <Left>
+            <HeroText>
+              Her zaman & her yere <br /> binlerce ürün siparisi ver.
+          </HeroText>
+            <Separator width={72} marginBottom={30} marginTop={isMobile && 10} color={theme.SEPARATOR_YELLOW} />
+            <DetailText>
+              {DETAIL_TEXT}
+            </DetailText>
+            {!isMobile &&
+              <ETA />
+            }
+          </Left>
+          <HeroImg />
+        </Container>
+        {isMobile &&
+          <ETA isMobile={isMobile} />
+        }
+      </div>
     </Fade>
   )
 }

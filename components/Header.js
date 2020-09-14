@@ -16,15 +16,15 @@ const Header = styled.header`
     align-items:center;
   }
   @media only screen and (max-width: 1440px) {
-    .no-mobile{
-      display:none;
-    }
   }
 
   @media only screen and (max-width: 1280px) {
   }
 
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 960px) {
+    .no-mobile{
+      display:none;
+    }
   }
 `
 
@@ -78,6 +78,13 @@ const ProfilePicture = styled.img`
   background-image: url("https://pbs.twimg.com/profile_images/977536334377168896/FSIxjgf7_400x400.jpg");
   background-repeat: none;
   background-size:cover;
+
+
+  @media only screen and (max-width: 960px) {
+    width:42px;
+    height:42px;
+    margin-left:1em;
+  }
 `
 
 const Item = styled.div`
@@ -120,6 +127,25 @@ const HeartContainer = styled.div`
   background:${({ theme }) => theme.HOME_YELLOW};
 `
 
+const MobileSearchContainer = styled.div`
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  cursor:pointer;
+
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:${({ theme }) => "#EDE9FF"};
+
+  &:hover,&:focus{
+    background:${({ theme }) => "#5D3EBC"};
+    svg path{
+      background:${({ theme }) => "white"};
+    }
+  }
+`
+
 
 const CartContainer = styled.div`
   position:relative;
@@ -153,12 +179,15 @@ const Badge = styled.div`
   box-shadow: 0px 2px 8px -2px #C1BADE;
 `
 
-const CustomHeader = ({ toggleTheme }) => {
+const CustomHeader = ({ toggleTheme, isMobile }) => {
   return (
     <Fade duration={700}>
       <Header>
-        <Left>
-          <span onClick={() => toggleTheme()}><Logo src="/logo.png" width="80x" alt="getir" /></span>
+        {isMobile &&
+          <span onClick={() => toggleTheme()}><Logo src="/logo-mobile.png" width="40px" alt="getir" /></span>
+        }
+        <Left className="no-mobile">
+          <span onClick={() => toggleTheme()}><Logo src="/logo.png" width="80px" alt="getir" /></span>
           <Search>
             <input type="text" placeholder="getir'de ara" />
             <SearchIcon />
@@ -180,10 +209,17 @@ const CustomHeader = ({ toggleTheme }) => {
             <VerticalSeparator />
           </div>
 
-          <HeartContainer>
-            <Heart />
-          </HeartContainer>
+          {isMobile &&
+            <MobileSearchContainer>
+              <SearchIcon />
+            </MobileSearchContainer>
+          }
 
+          {!isMobile &&
+            <HeartContainer>
+              <Heart />
+            </HeartContainer>
+          }
           <Item>
             <CartContainer>
               <Badge>
@@ -194,7 +230,7 @@ const CustomHeader = ({ toggleTheme }) => {
           </Item>
 
           <Item>
-            <p className="hi">Selam,</p><strong>Melih</strong>
+            <p className="hi no-mobile">Selam,</p><strong className="no-mobile">Melih</strong>
             <ProfilePicture />
           </Item>
         </Right>

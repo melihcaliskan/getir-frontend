@@ -17,15 +17,25 @@ const Container = styled.section`
     width:80%;
     margin-left:10%;
   }
+
+  @media only screen and (max-width: 740px) {
+    margin-top:1.5em;
+  }
 `
 const Title = styled.p`
   text-align:center;
   font-size:24px;
+  @media only screen and (max-width: 960px) {
+    font-size:20px;
+  }
 `
 
 const ButtonContainer = styled.div`
   display:flex;
   justify-content:center;
+  @media only screen and (max-width: 960px) {
+    margin-top:-3em;
+  }
 `
 
 
@@ -52,6 +62,11 @@ const CarouselButton = styled.div`
     svg path{
       fill:white;
     }
+  }
+
+  @media only screen and (max-width: 960px) {
+    width:36px;
+    height:36px;
   }
 `
 

@@ -7,10 +7,16 @@ import useSWR from 'swr'
 
 const Container = styled.section`
   margin-top:5em;
+  @media only screen and (max-width: 960px) {
+    margin-top:1em;
+  }
 `
 const Title = styled.p`
   text-align:center;
   font-size:24px;
+  @media only screen and (max-width: 960px) {
+    font-size:20px;
+  }
 `
 const Grid = styled.div`
   background:${({ theme }) => theme.HOME_CATEGORY_BG};
@@ -22,8 +28,13 @@ const Grid = styled.div`
 
   border-radius:30px;
 
-  margin-top:8em;
+  margin-top:10em;
   padding:3em;
+  @media only screen and (max-width: 960px) {
+    grid-gap: 10px;
+    margin-top:5em;
+    padding:0 1em 1.5em 1em;
+  }
 `
 
 const Item = styled.div`
@@ -64,6 +75,23 @@ const Item = styled.div`
   @media only screen and (max-width: 1280px) {
     width:140px;
     height:140px;
+  }
+
+  @media only screen and (max-width: 960px) {
+    &:nth-child(-n+3){
+      margin-top: ${(props) => props.isMobile && "-2.5em"}
+    }
+
+    padding:1em;
+
+    border-radius:15px;
+    width:90px;
+    height:90px;
+
+    img{
+      width:24px;
+      height:24px;
+    }
   }
 `
 

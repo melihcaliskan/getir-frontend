@@ -28,6 +28,10 @@ const Footer = styled.footer`
   }
 
   margin-top:5em;
+
+  @media only screen and (max-width: 960px) {
+    padding:2em 0 0 0;
+  }
 `
 const Links = styled.div`
   display:flex;
@@ -47,6 +51,15 @@ const Links = styled.div`
     margin:0 0.5em;
     font-size:24px;
   }
+  @media only screen and (max-width: 960px) {
+    flex-direction:column;
+    a{
+       margin:0.5em 0;
+    }
+    .middle-dot{
+      display:none;
+    }
+  }
 `
 
 const Social = styled.div`
@@ -59,6 +72,10 @@ const Social = styled.div`
     cursor:pointer;
     font-size:20px;
     margin:0 0.3em;
+  }
+
+  @media only screen and (max-width: 960px) {
+    margin:1em 0 2em 0;
   }
 `
 

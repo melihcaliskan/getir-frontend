@@ -6,7 +6,6 @@ import styled from 'styled-components'
 const Container = styled.div`
 	display:inline-flex;
 	align-items:center;
-
 	margin:2.5rem 0;
 	padding:0.4rem 1.5em;
 	border-radius: 14px;
@@ -30,15 +29,23 @@ const Container = styled.div`
 	&:hover{
 		background:#F4F4F6;
 	}
+
+	@media only screen and (max-width: 960px) {
+		display:flex;
+		padding:0.2em 1em;
+		svg{
+			font-size:16px;
+		}
+	}
 `
 
 // Separator componenti ile yapılacak.
-const ETA = (props) => {
+const ETA = ({ isMobile }) => {
 	return (
 		<Container>
 			<Location />
 			<VerticalSeparator />
-			<p>Bebek Mah. Cevdetpaşa Cad. N..</p>
+			<p>Bebek Mah. Cevdetpaşa{isMobile && ".."} {!isMobile && "Cad. N.."} </p>
 			<VerticalSeparator />
 			<Vehicle />
 			<p className="brand-color">9 DK</p>
