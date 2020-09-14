@@ -69,7 +69,7 @@ const Item = styled.div`
 
 const Categories = ({ isMobile }) => {
   const { data, error } = useSWR('/api/categories', fetcher)
-  const dataLength = isMobile ? 6 : data.length
+  const dataLength = isMobile ? 6 : data && data.length
   return (
     <Fade>
       <Container>
