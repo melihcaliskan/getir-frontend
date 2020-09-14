@@ -18,8 +18,11 @@ const Container = styled.section`
     margin-left:10%;
   }
 
-  @media only screen and (max-width: 740px) {
+  @media only screen and (max-width: 960px) {
     margin-top:1.5em;
+    img{
+      margin:3em 3em 1em 3em;
+    }
   }
 `
 const Title = styled.p`
@@ -33,9 +36,6 @@ const Title = styled.p`
 const ButtonContainer = styled.div`
   display:flex;
   justify-content:center;
-  @media only screen and (max-width: 960px) {
-    margin-top:-3em;
-  }
 `
 
 
@@ -54,7 +54,7 @@ const CarouselButton = styled.div`
   transition: background-color .4s;
 
   svg path{
-      fill:#5D3EBC;
+    fill:#5D3EBC;
   }
 
   &:hover, &:focus{
