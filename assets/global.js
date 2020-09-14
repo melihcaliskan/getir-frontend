@@ -19,6 +19,20 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.TEXT};
   }
 
+  .loader{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height:100vh;
+    img{
+        animation: breathing 2s ease-out infinite normal;
+        width:15%;
+        @media only screen and (max-width: 960px) {
+          width:30%;
+        }
+    }
+  }
+
   @keyframes breathing {
     0% {
       -webkit-transform: scale(0.9);
