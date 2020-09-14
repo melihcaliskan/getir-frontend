@@ -1,10 +1,12 @@
 export const theme = {
   BRAND_PURPLE: "#59509A",
-  HOME_YELLOW: "#FCF4D0"
+  HOME_YELLOW: "#FFF5CC",
+  SEPARATOR_YELLOW: "#FFD831",
+  SEPARATOR: "#CECCD6",
 }
 export const lightTheme = {
   blank: 'white',
-  body: "#F8F8F8",
+  body: "white",
   body_100: "#EFEFEF",
   body_200: "#E2E2E2",
   body_300: "#C9C9C9",
@@ -14,6 +16,15 @@ export const lightTheme = {
   body_700: "#464646",
   body_800: "#2F2F2F",
   body_900: "#191919",
+
+  TEXT:"#3B3946",
+  SEARCH_TEXT: "#AEABBA",
+  DETAIL_TEXT: "#3B3946",
+  FOOTER_TEXT:"#494178",
+  FOOTER_SEPARATOR:"#FFD733",
+
+  HOME_CATEGORY_BG: "#F9F9FA",
+
   ...theme
 }
 
