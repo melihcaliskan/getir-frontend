@@ -13,17 +13,19 @@ const Container = styled.div`
 `
 
 const Home = (props) => {
-  const { loading, t, isLight, theme, toggleTheme } = props
+  const { loading, t, isLight, theme, toggleTheme, isMobile } = props
   if (loading) {
     return "Loading"
   }
   return (
     <>
       <Container>
-        <Header />
-        <CTA />
-        <Categories />
-        <Offers />
+        <Header {...props} />
+        <CTA  {...props}/>
+        <Categories isMobile={isMobile} />
+        {/*}
+        <Offers isMobile={isMobile} />
+        {*/}
       </Container>
       <Footer />
     </>
