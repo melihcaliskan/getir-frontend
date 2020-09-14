@@ -48,24 +48,34 @@ const HeroImg = styled.div`
   height:480px;
   position:absolute;
   top:40px;
-  right:0;
+  right:10%;
   background-image: url("/hero-img.png");
   background-size:contain;
   background-repeat:no-repeat;
 
+  transition: width .4s;
+  
   @media only screen and (max-width: 1560px) {
+    right:4%;
     top:80px;
     width:400px;
   }
 
   @media only screen and (max-width: 1280px) {
+    right:0;
     top:40px;
     width:360px;
   }
 
   @media only screen and (max-width: 960px) {
+    right:5%;
+    top:0px;
+    width:220px;
+  }
+  @media only screen and (max-width: 640px) {
+    right:0;
     top:80px;
-    width:120px;
+    width:140px;
   }
 `
 
@@ -78,7 +88,7 @@ const CTA = ({ isMobile, theme }) => {
                         Kocaeli ve Bodrum'da dilediğiniz yere
                         mutluluk getiriyoruz.`
   return (
-    <Fade bottom duration={700} distance="50px">
+    <Fade bottom duration={400} distance="30px">
       <div>
         <Container>
           <Left>
