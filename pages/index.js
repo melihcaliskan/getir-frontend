@@ -3,9 +3,9 @@ import CTA from "../components/CTA"
 import Categories from "../components/Categories"
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Loader from "../components/Loader"
 import Offers from "../components/Offers"
 import styled from 'styled-components'
-
 const Container = styled.div`
   display:flex;
   flex-direction:column;
@@ -26,7 +26,7 @@ const Container = styled.div`
 const Home = (props) => {
   const { loading, t, isLight, theme, toggleTheme, isMobile } = props
   if (loading) {
-    return null
+    return <Loader />
   }
   return (
     <>
