@@ -1,5 +1,9 @@
 # getir
 getir uygulamasının Next.js ile yapılmış web istemcisi.
+Demo: https://getir-frontend.vercel.app/
+
+![getir](public/ss.png?raw=true "Title")
+
 
 # Kurulum
 ```
