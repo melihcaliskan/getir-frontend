@@ -123,7 +123,7 @@ const Apps = ({ isMobile }) => {
   return (
     <Container>
       <HeroImage />
-      <div class="text-container">
+      <div className="text-container">
         <HeroText>
           Getir uygulamasını <br /> simdi indirin.
 					</HeroText>
